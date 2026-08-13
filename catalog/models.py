@@ -19,7 +19,7 @@ class Estado(models.TextChoices):
 
 
 class Rentals(models.Model):
-    vehicle_id = models.ForeignKey(Vehicles, on_delete=models.PROTECT, related_name="vehiculos")
+    vehicle = models.ForeignKey(Vehicles, on_delete=models.PROTECT, related_name="vehiculos")
     customer_name = models.CharField(max_length=120)
     total = models.DecimalField(
         max_digits=10, 
